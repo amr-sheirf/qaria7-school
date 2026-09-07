@@ -259,9 +259,51 @@ async function addNews(){
 async function addGallery(){
   loading(true);try{await api("addGallery",{title:$("aGalleryTitle").value.trim(),image:$("aGalleryImage").value.trim()});$("aGalleryTitle").value=$("aGalleryImage").value="";await loadAdminData();await loadPublic()}catch(e){alert(e.message)}finally{loading(false)}
 async function deleteItem(type,id){
-  if(!confirm("هل تريد حذف هذا العنصر؟"))return;loading(true);try{await api("deleteItem",{type,id});await loadAdminData();await loadPublic()}catch(e){alert(e.message)}finally{loading(false)}
+  if(!confirm("هل تريد حذف هذا العنصر؟")) return;
+
+  loading(true);
+
+  try{
+    await api("deleteItem",{type,id});
+    await loadAdminData();
+    await loadPublic();
+  }catch(e){
+    alert(e.message);
+  }finally{
+    loading(false);
+  }
+}
+
 async function saveSettings(){
-  loading(true);try{await api("saveSettings",{about:$("aAbout").value,address:$("aAddress").value,phone:$("aPhone").value,facebook:$("aFacebook").value});msg("adminSettingsMsg","تم حفظ بيانات التواصل","ok");await loadPublic()}catch(e){msg("adminSettingsMsg",e.message,"error")}finally{loading(false)}
+  loading(true);
+
+  try{
+    await api("saveSettings",{
+      about:$("aAbout").value,
+      address:$("aAddress").value,
+      phone:$("aPhone").value,
+      facebook:$("aFacebook").value
+    });
+
+    msg(
+      "adminSettingsMsg",
+      "تم حفظ بيانات التواصل",
+      "ok"
+    );
+
+    await loadPublic();
+
+  }catch(e){
+    msg(
+      "adminSettingsMsg",
+      e.message,
+      "error"
+    );
+  }finally{
+    loading(false);
+  }
+}
+
 $("year").textContent=new Date().getFullYear();
 loadPublic();
 </script>
