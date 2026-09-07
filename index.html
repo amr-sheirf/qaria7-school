@@ -258,11 +258,11 @@ async function addNews(){
 }
 async function addGallery(){
   loading(true);try{await api("addGallery",{title:$("aGalleryTitle").value.trim(),image:$("aGalleryImage").value.trim()});$("aGalleryTitle").value=$("aGalleryImage").value="";await loadAdminData();await loadPublic()}catch(e){alert(e.message)}finally{loading(false)}
+}
+
 async function deleteItem(type,id){
   if(!confirm("هل تريد حذف هذا العنصر؟")) return;
-
   loading(true);
-
   try{
     await api("deleteItem",{type,id});
     await loadAdminData();
@@ -276,7 +276,6 @@ async function deleteItem(type,id){
 
 async function saveSettings(){
   loading(true);
-
   try{
     await api("saveSettings",{
       about:$("aAbout").value,
@@ -284,21 +283,10 @@ async function saveSettings(){
       phone:$("aPhone").value,
       facebook:$("aFacebook").value
     });
-
-    msg(
-      "adminSettingsMsg",
-      "تم حفظ بيانات التواصل",
-      "ok"
-    );
-
+    msg("adminSettingsMsg","تم حفظ بيانات التواصل","ok");
     await loadPublic();
-
   }catch(e){
-    msg(
-      "adminSettingsMsg",
-      e.message,
-      "error"
-    );
+    msg("adminSettingsMsg",e.message,"error");
   }finally{
     loading(false);
   }
