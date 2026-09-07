@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="البوابة الإلكترونية لمدرسة قرية 7 الابتدائية">
+<title>مدرسة قرية 7 الابتدائية | البوابة الإلكترونية</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#123047;--blue:#1d5d82;--gold:#d6a83b;--gold2:#f3d47c;--cream:#f7f4ec;--white:#fff;--text:#1c2933;--muted:#6c7882;--danger:#b42318;--ok:#18794e;--shadow:0 12px 35px rgba(18,48,71,.11);--radius:20px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Cairo,Arial,sans-serif;color:var(--text);background:#f5f7f9}
+button,input,select,textarea{font:inherit}button{cursor:pointer}
+.topline{height:7px;background:linear-gradient(90deg,var(--navy),var(--gold),var(--navy))}
+header{background:linear-gradient(135deg,#fff,#f7f2e5);border-bottom:1px solid #e6dfcf}
+.header-wrap{max-width:1200px;margin:auto;padding:24px 20px;display:flex;align-items:center;gap:25px}
+.logo{width:145px;height:145px;object-fit:contain;flex:0 0 auto;filter:drop-shadow(0 8px 14px rgba(0,0,0,.12))}
+.head-text{flex:1;text-align:right}.directorate{font-weight:800;color:var(--navy);font-size:1.2rem}.administration{font-weight:700;color:#9a721a;font-size:1.05rem}.welcome{font-weight:800;color:#a21e1e;font-size:clamp(1.2rem,2.5vw,2rem);margin-top:7px}
+nav{position:sticky;top:0;z-index:50;background:rgba(18,48,71,.97);box-shadow:0 5px 18px rgba(0,0,0,.12)}
+.nav-wrap{max-width:1200px;margin:auto;display:flex;align-items:center;gap:4px;padding:7px 12px;overflow:auto}
+.nav-wrap a{color:#fff;text-decoration:none;padding:10px 14px;border-radius:12px;white-space:nowrap;font-weight:700;font-size:.92rem}.nav-wrap a:hover{background:rgba(255,255,255,.12)}
+.container{max-width:1200px;margin:auto;padding:30px 18px}.hero{background:linear-gradient(120deg,var(--navy),#246486);color:white;border-radius:28px;padding:36px;box-shadow:var(--shadow);position:relative;overflow:hidden}.hero:after{content:"";position:absolute;inset:auto -80px -100px auto;width:300px;height:300px;border:35px solid rgba(214,168,59,.22);border-radius:50%}.hero h1{margin:0 0 8px;font-size:clamp(1.7rem,4vw,2.7rem)}.hero p{margin:0;opacity:.9;max-width:760px}
+.section{margin-top:34px}.section-title{display:flex;align-items:center;gap:12px;margin-bottom:16px}.section-title h2{margin:0;color:var(--navy);font-size:1.55rem}.section-title:before{content:"";width:7px;height:31px;border-radius:8px;background:var(--gold)}
+.card{background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.news-card{overflow:hidden;padding:0}.news-img{height:190px;width:100%;object-fit:cover;background:#e8edf1}.news-body{padding:18px}.news-body h3{margin:0 0 8px;color:var(--navy)}.date{font-size:.8rem;color:var(--muted)}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:15px}.tab{border:1px solid #d7dee4;background:#fff;padding:10px 16px;border-radius:12px;font-weight:700;color:var(--navy)}.tab.active{background:var(--navy);color:#fff}
+.form-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.field{display:flex;flex-direction:column;gap:6px}.field.full{grid-column:1/-1}.field label{font-weight:700;color:var(--navy)}input,select,textarea{width:100%;border:1px solid #d3dce3;border-radius:12px;padding:12px 13px;background:#fff;outline:none}input:focus,select:focus,textarea:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(29,93,130,.1)}textarea{min-height:125px;resize:vertical}.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}.btn{border:0;border-radius:12px;padding:11px 18px;font-weight:800}.btn-primary{background:var(--navy);color:#fff}.btn-gold{background:var(--gold);color:#172a37}.btn-light{background:#eef3f6;color:var(--navy)}
+.result{margin-top:15px}.table-wrap{overflow:auto}.result-table{width:100%;border-collapse:collapse}.result-table th,.result-table td{padding:10px;border-bottom:1px solid #e5eaee;text-align:right}.result-table th{background:#f4f7f9;color:var(--navy)}
+.notice{padding:13px 15px;border-radius:12px;margin-top:14px}.notice.ok{background:#eaf8f0;color:var(--ok)}.notice.error{background:#fff0ef;color:var(--danger)}.notice.info{background:#eef5fb;color:var(--navy)}
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.gallery img{width:100%;height:180px;object-fit:cover;border-radius:15px;cursor:pointer;background:#e8edf1}
+footer{margin-top:45px;background:var(--navy);color:#fff}.footer-grid{max-width:1200px;margin:auto;padding:32px 18px;display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:25px}.footer-title{color:var(--gold2);font-weight:800;font-size:1.15rem;margin-bottom:8px}.footer-grid p{margin:6px 0;opacity:.9}.footer-bottom{text-align:center;border-top:1px solid rgba(255,255,255,.12);padding:13px;color:#dbe4ea;font-size:.85rem}
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.62);display:none;align-items:center;justify-content:center;padding:18px;z-index:100}.modal.show{display:flex}.modal-box{width:min(100%,720px);max-height:90vh;overflow:auto;background:#fff;border-radius:20px;padding:22px}.close{float:left;border:0;background:#eef2f4;border-radius:50%;width:36px;height:36px;font-size:20px}
+.loader{position:fixed;inset:0;background:rgba(255,255,255,.72);display:none;align-items:center;justify-content:center;z-index:200}.loader.show{display:flex}.spinner{width:45px;height:45px;border:5px solid #dfe6eb;border-top-color:var(--navy);border-radius:50%;animation:spin .8s linear infinite}@keyframes spin{to{transform:rotate(360deg)}}
+.admin-toolbar{display:flex;gap:8px;flex-wrap:wrap}.admin-list{display:grid;gap:10px;margin-top:14px}.admin-row{border:1px solid #e1e7eb;border-radius:12px;padding:12px;display:flex;justify-content:space-between;gap:10px;align-items:center}.admin-row small{color:var(--muted)}
+@media(max-width:900px){.grid{grid-template-columns:1fr 1fr}.gallery{grid-template-columns:repeat(2,1fr)}.footer-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:650px){.header-wrap{flex-direction:column;text-align:center}.head-text{text-align:center}.logo{width:120px;height:120px}.grid,.form-grid,.footer-grid{grid-template-columns:1fr}.hero{padding:25px}.gallery{grid-template-columns:1fr 1fr}.nav-wrap{justify-content:flex-start}}
+</style>
+</head>
+<body>
+<div class="topline"></div>
+<header>
+  <div class="header-wrap">
+    <img class="logo" src="assets/logo.png" alt="شعار مدرسة قرية 7 الابتدائية">
+    <div class="head-text">
+      <div class="directorate">مديرية التربية والتعليم بكفر الشيخ</div>
+      <div class="administration">إدارة الحامول التعليمية</div>
+      <div class="welcome">البوابة الالكترونية لمدرسة قرية 7 الابتدائية ترحب بكم ..</div>
+    </div>
+  </div>
+</header>
+
+<nav><div class="nav-wrap">
+  <a href="#home">الرئيسية</a><a href="#news">الأخبار</a><a href="#students">شئون الطلاب</a><a href="#requests">طلبات أولياء الأمور</a><a href="#gallery">معرض الصور</a><a href="#contact">التواصل</a><a href="#admin" onclick="openAdmin()">إدارة الصفحة</a>
+</div></nav>
+
+<main class="container">
+  <section id="home" class="hero">
+    <h1>مرحبًا بكم في مدرسة قرية 7 الابتدائية</h1>
+    <p>بوابة إلكترونية لخدمة الطلاب وأولياء الأمور، ونشر أخبار المدرسة وفعالياتها، وتوفير خدمات الاستعلام والتواصل مع إدارة المدرسة.</p>
+  </section>
+
+  <section id="news" class="section">
+    <div class="section-title"><h2>آخر الأخبار والإعلانات</h2></div>
+    <div id="newsGrid" class="grid"><div class="card">جاري تحميل الأخبار...</div></div>
+  </section>
+
+  <section id="students" class="section">
+    <div class="section-title"><h2>شئون الطلاب</h2></div>
+    <div class="card">
+      <div class="tabs">
+        <button class="tab active" onclick="showStudentTab('results',this)">نتائج الطلاب</button>
+        <button class="tab" onclick="showStudentTab('absence',this)">غياب الطلاب</button>
+      </div>
+      <div id="resultsPane">
+        <div class="form-grid">
+          <div class="field"><label>رقم الجلوس</label><input id="seatNo" placeholder="أدخل رقم الجلوس"></div>
+          <div class="field"><label>اسم الطالب</label><input id="studentName" placeholder="اكتب اسم الطالب"></div>
+        </div>
+        <div class="actions"><button class="btn btn-primary" onclick="searchResult()">بحث عن النتيجة</button></div>
+        <div id="resultBox" class="result"></div>
+      </div>
+      <div id="absencePane" style="display:none">
+        <div class="form-grid">
+          <div class="field"><label>الصف الدراسي</label><select id="grade"><option value="">اختر الصف</option><option>الأول</option><option>الثاني</option><option>الثالث</option><option>الرابع</option><option>الخامس</option><option>السادس</option></select></div>
+          <div class="field"><label>اسم الطالب</label><input id="absenceName" placeholder="اكتب اسم الطالب"></div>
+        </div>
+        <div class="actions"><button class="btn btn-primary" onclick="searchAbsence()">بحث عن الغياب</button></div>
+        <div id="absenceBox" class="result"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="requests" class="section">
+    <div class="section-title"><h2>طلبات أولياء الأمور والشكاوى والمقترحات</h2></div>
+    <div class="card">
+      <form id="requestForm" onsubmit="submitRequest(event)">
+        <div class="form-grid">
+          <div class="field"><label>اسم مقدم الطلب</label><input id="reqName" required></div>
+          <div class="field"><label>رقم التليفون / واتساب</label><input id="reqPhone" required inputmode="tel"></div>
+          <div class="field full"><label>العنوان</label><input id="reqAddress"></div>
+          <div class="field full"><label>نص الطلب أو الشكوى أو المقترح</label><textarea id="reqText" required></textarea></div>
+        </div>
+        <div class="actions"><button class="btn btn-gold" type="submit">إرسال إلى المدرسة</button></div>
+        <div id="requestMsg"></div>
+      </form>
+    </div>
+  </section>
+
+  <section id="gallery" class="section">
+    <div class="section-title"><h2>معرض الصور والفعاليات</h2></div>
+    <div id="galleryGrid" class="gallery"></div>
+  </section>
+</main>
+
+<footer id="contact">
+  <div class="footer-grid">
+    <div><div class="footer-title">نبذة عن المدرسة</div><p id="aboutText">مدرسة قرية 7 الابتدائية تسعى إلى تقديم بيئة تعليمية آمنة ومحفزة ودعم التواصل الفعال مع الطلاب وأولياء الأمور.</p></div>
+    <div><div class="footer-title">للتواصل</div><p id="addressText">العنوان: قرية 7 – الحامول – كفر الشيخ</p><p id="phoneText">التليفون / واتساب: يُضاف من لوحة الإدارة</p></div>
+    <div><div class="footer-title">روابط المدرسة</div><p><a id="facebookLink" href="#" target="_blank" rel="noopener" style="color:#fff">صفحة المدرسة على فيسبوك</a></p></div>
+  </div>
+  <div class="footer-bottom">© <span id="year"></span> مدرسة قرية 7 الابتدائية — جميع الحقوق محفوظة</div>
+</footer>
+
+<div id="adminModal" class="modal">
+ <div class="modal-box">
+  <button class="close" onclick="closeAdmin()">×</button>
+  <h2 style="color:var(--navy);margin-top:0">إدارة الصفحة</h2>
+  <div id="loginPane">
+    <p>الدخول محمي بكلمة مرور الإدارة.</p>
+    <input id="adminPassword" type="password" placeholder="كلمة مرور الإدارة">
+    <div class="actions"><button class="btn btn-primary" onclick="adminLogin()">دخول</button></div>
+    <div id="adminMsg"></div>
+  </div>
+  <div id="adminPane" style="display:none">
+    <div class="admin-toolbar">
+      <button class="btn btn-primary" onclick="loadAdminData()">تحديث البيانات</button>
+      <button class="btn btn-light" onclick="adminLogout()">تسجيل الخروج</button>
+    </div>
+    <hr>
+    <h3>إضافة خبر</h3>
+    <div class="form-grid">
+      <div class="field"><label>عنوان الخبر</label><input id="aNewsTitle"></div>
+      <div class="field"><label>رابط الصورة</label><input id="aNewsImage" placeholder="رابط صورة عامة أو من مستودعك"></div>
+      <div class="field full"><label>نص الخبر</label><textarea id="aNewsText"></textarea></div>
+    </div>
+    <div class="actions"><button class="btn btn-gold" onclick="addNews()">حفظ الخبر</button></div>
+    <div id="adminNewsList" class="admin-list"></div>
+    <hr>
+    <h3>إضافة صورة للمعرض</h3>
+    <div class="form-grid">
+      <div class="field"><label>عنوان الصورة</label><input id="aGalleryTitle"></div>
+      <div class="field"><label>رابط الصورة</label><input id="aGalleryImage"></div>
+    </div>
+    <div class="actions"><button class="btn btn-gold" onclick="addGallery()">حفظ الصورة</button></div>
+    <div id="adminGalleryList" class="admin-list"></div>
+    <hr>
+    <h3>بيانات التواصل</h3>
+    <div class="form-grid">
+      <div class="field full"><label>نبذة المدرسة</label><textarea id="aAbout"></textarea></div>
+      <div class="field"><label>العنوان</label><input id="aAddress"></div>
+      <div class="field"><label>التليفون / واتساب</label><input id="aPhone"></div>
+      <div class="field full"><label>رابط فيسبوك</label><input id="aFacebook"></div>
+    </div>
+    <div class="actions"><button class="btn btn-gold" onclick="saveSettings()">حفظ بيانات التواصل</button></div>
+    <div id="adminSettingsMsg"></div>
+  </div>
+ </div>
+</div>
+<div class="loader" id="loader"><div class="spinner"></div></div>
+
+<script>
+/* Cloudflare Pages Function proxies /api to Google Apps Script. */
+const API_BASE = "/api";
+let adminToken = null;
+
+const $ = id => document.getElementById(id);
+const esc = s => String(s ?? "").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[c]));
+function loading(v){$("loader").classList.toggle("show",v)}
+function msg(id,text,type="info"){ $(id).innerHTML=`<div class="notice ${type}">${esc(text)}</div>` }
+
+async function api(action,data={}){
+  const res=await fetch(API_BASE,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({action,...data,token:adminToken})});
+  if(!res.ok) throw new Error("تعذر الاتصال بالخادم");
+  const json=await res.json();
+  if(json.status==="error") throw new Error(json.message||"حدث خطأ");
+  return json;
+}
+async function loadPublic(){
+  try{
+    const r=await api("publicData");
+    renderNews(r.news||[]); renderGallery(r.gallery||[]); renderSettings(r.settings||{});
+  }catch(e){
+    $("newsGrid").innerHTML=`<div class="card">تعذر تحميل البيانات. تأكد من إعداد Google Apps Script وCloudflare Worker.</div>`;
+    $("galleryGrid").innerHTML="";
+  }
+}
+function renderNews(items){
+  $("newsGrid").innerHTML=items.length?items.map(n=>`<article class="card news-card"><img class="news-img" src="${esc(n.image||"assets/logo.png")}" alt=""><div class="news-body"><div class="date">${esc(n.date||"")}</div><h3>${esc(n.title)}</h3><p>${esc(n.text)}</p></div></article>`).join(""):`<div class="card">لا توجد أخبار منشورة حاليًا.</div>`;
+}
+function renderGallery(items){
+  $("galleryGrid").innerHTML=items.map(g=>`<img src="${esc(g.image)}" alt="${esc(g.title)}" title="${esc(g.title)}" onclick="openImage(this.src)">`).join("");
+}
+function renderSettings(s){
+  if(s.about) $("aboutText").textContent=s.about;
+  if(s.address) $("addressText").textContent="العنوان: "+s.address;
+  if(s.phone) $("phoneText").textContent="التليفون / واتساب: "+s.phone;
+  if(s.facebook){$("facebookLink").href=s.facebook;$("facebookLink").style.display="inline";}
+}
+function openImage(src){window.open(src,"_blank","noopener")}
+function showStudentTab(which,btn){
+  document.querySelectorAll(".tab").forEach(x=>x.classList.remove("active"));btn.classList.add("active");
+  $("resultsPane").style.display=which==="results"?"block":"none";$("absencePane").style.display=which==="absence"?"block":"none";
+}
+async function searchResult(){
+  const seat=$("seatNo").value.trim(), name=$("studentName").value.trim();
+  if(!seat&&!name)return msg("resultBox","أدخل رقم الجلوس أو اسم الطالب","error");
+  loading(true);try{
+    const r=await api("searchResult",{seatNo:seat,name});
+    if(!r.rows?.length)return msg("resultBox","لا توجد نتيجة مطابقة","error");
+    $("resultBox").innerHTML=`<div class="notice ok">تم العثور على ${r.rows.length} سجل.</div><div class="table-wrap"><table class="result-table"><thead><tr>${r.headers.map(h=>`<th>${esc(h)}</th>`).join("")}</tr></thead><tbody>${r.rows.map(row=>`<tr>${row.map(v=>`<td>${esc(v)}</td>`).join("")}</tr>`).join("")}</tbody></table></div>`;
+  }catch(e){msg("resultBox",e.message,"error")}finally{loading(false)}
+}
+async function searchAbsence(){
+  const grade=$("grade").value,name=$("absenceName").value.trim();
+  if(!grade&&!name)return msg("absenceBox","اختر الصف أو أدخل اسم الطالب","error");
+  loading(true);try{
+    const r=await api("searchAbsence",{grade,name});
+    if(!r.rows?.length)return msg("absenceBox","لا توجد بيانات غياب مطابقة","error");
+    $("absenceBox").innerHTML=`<div class="table-wrap"><table class="result-table"><thead><tr>${r.headers.map(h=>`<th>${esc(h)}</th>`).join("")}</tr></thead><tbody>${r.rows.map(row=>`<tr>${row.map(v=>`<td>${esc(v)}</td>`).join("")}</tr>`).join("")}</tbody></table></div>`;
+  }catch(e){msg("absenceBox",e.message,"error")}finally{loading(false)}
+}
+async function submitRequest(e){
+  e.preventDefault();loading(true);
+  try{await api("submitRequest",{name:$("reqName").value.trim(),phone:$("reqPhone").value.trim(),address:$("reqAddress").value.trim(),text:$("reqText").value.trim()});$("requestForm").reset();msg("requestMsg","تم إرسال الطلب إلى المدرسة بنجاح","ok")}
+  catch(err){msg("requestMsg",err.message,"error")}finally{loading(false)}
+}
+function openAdmin(){ $("adminModal").classList.add("show"); }
+function closeAdmin(){ $("adminModal").classList.remove("show"); }
+async function adminLogin(){
+  const password=$("adminPassword").value;
+  if(!password)return msg("adminMsg","أدخل كلمة المرور","error");
+  loading(true);try{
+    const r=await api("adminLogin",{password});
+    adminToken=r.token; $("loginPane").style.display="none";$("adminPane").style.display="block"; await loadAdminData();
+  }catch(e){msg("adminMsg",e.message,"error")}finally{loading(false)}
+}
+function adminLogout(){adminToken=null;$("loginPane").style.display="block";$("adminPane").style.display="none";$("adminPassword").value=""}
+async function loadAdminData(){
+  loading(true);try{
+    const r=await api("adminData");
+    $("adminNewsList").innerHTML=(r.news||[]).map(n=>`<div class="admin-row"><div><b>${esc(n.title)}</b><br><small>${esc(n.date||"")}</small></div><button class="btn btn-light" onclick="deleteItem('news',${Number(n.id)})">حذف</button></div>`).join("");
+    $("adminGalleryList").innerHTML=(r.gallery||[]).map(g=>`<div class="admin-row"><div><b>${esc(g.title)}</b></div><button class="btn btn-light" onclick="deleteItem('gallery',${Number(g.id)})">حذف</button></div>`).join("");
+    const s=r.settings||{};$("aAbout").value=s.about||"";$("aAddress").value=s.address||"";$("aPhone").value=s.phone||"";$("aFacebook").value=s.facebook||"";
+  }catch(e){msg("adminMsg",e.message,"error")}finally{loading(false)}
+}
+async function addNews(){
+  loading(true);try{await api("addNews",{title:$("aNewsTitle").value.trim(),text:$("aNewsText").value.trim(),image:$("aNewsImage").value.trim()});$("aNewsTitle").value=$("aNewsText").value=$("aNewsImage").value="";await loadAdminData();await loadPublic()}catch(e){alert(e.message)}finally{loading(false)}
+}
+async function addGallery(){
+  loading(true);try{await api("addGallery",{title:$("aGalleryTitle").value.trim(),image:$("aGalleryImage").value.trim()});$("aGalleryTitle").value=$("aGalleryImage").value="";await loadAdminData();await loadPublic()}catch(e){alert(e.message)}finally{loading(false)}
+async function deleteItem(type,id){
+  if(!confirm("هل تريد حذف هذا العنصر؟"))return;loading(true);try{await api("deleteItem",{type,id});await loadAdminData();await loadPublic()}catch(e){alert(e.message)}finally{loading(false)}
+async function saveSettings(){
+  loading(true);try{await api("saveSettings",{about:$("aAbout").value,address:$("aAddress").value,phone:$("aPhone").value,facebook:$("aFacebook").value});msg("adminSettingsMsg","تم حفظ بيانات التواصل","ok");await loadPublic()}catch(e){msg("adminSettingsMsg",e.message,"error")}finally{loading(false)}
+$("year").textContent=new Date().getFullYear();
+loadPublic();
+</script>
+</body>
+</html>
