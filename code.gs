@@ -26,9 +26,10 @@ const SESSION_TTL_SECONDS = 60 * 60 * 2;
 
 function getConfig_() {
   const p = PropertiesService.getScriptProperties();
+
   return {
-    spreadsheetId: p.getProperty("1GZ6M7bDi36s4MgdUk26XF1vfU_pOO0YJTMDTE7Ty6rM"),
-    adminPassword: p.getProperty("admin0100")
+    spreadsheetId: p.getProperty("SPREADSHEET_ID"),
+    adminPassword: p.getProperty("ADMIN_PASSWORD")
   };
 }
 
